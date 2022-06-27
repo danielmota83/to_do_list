@@ -1,0 +1,21 @@
+{
+  "name": "to_do_list",
+  "version": "1.0.0",
+  "description": "To do list - Projeto modulo 3 Blue EdTech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  }
+}
