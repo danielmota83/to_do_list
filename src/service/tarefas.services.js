@@ -4,26 +4,23 @@ const tarefas = [
   {
     id: 1,
     tarefa: 'Atividade física',
-    lembrarDe:
-      'Colocar o relógio para despertar. ',
+    lembrarDe: 'Colocar o relógio para despertar. ',
     descricao: 'corrida e exercícios ao ar livre',
-    horario: 5.30,
+    horario: 5.3,
   },
   {
     id: 2,
     tarefa: 'Dar aulas de física',
-    lembrarDe:
-      'Pegar todos os materias para as aulas ',
+    lembrarDe: 'Pegar todos os materias para as aulas ',
     descricao: 'Aulas de física para as turmas do 1º e 3º anos do ensino médio',
-    horario: 7.00,
+    horario: 7.0,
   },
   {
-    id:3,
+    id: 3,
     tarefa: 'Estudar Programação',
-    lembrarDe:
-      'Revisar o conteúdo da aula anterior.',
+    lembrarDe: 'Revisar o conteúdo da aula anterior.',
     descricao: 'Aulas de desenvolvimento full stack da BlueEdTech.',
-    horario: 19.00,
+    horario: 19.0,
   },
 ];
 
@@ -37,7 +34,7 @@ const findTarefaById = (id) => {
       return tarefa;
     }
   });
-  
+
   return tarefaById[indice];
 };
 
@@ -63,7 +60,7 @@ const deleteTarefa = (id) => {
       tarefas.splice(index, 1);
     }
   });
- };
+};
 
 const initialService = () => {
   return 'hello world';
@@ -75,5 +72,5 @@ module.exports = {
   findTarefaById,
   createTarefa,
   deleteTarefa,
-  updateTarefa
+  updateTarefa,
 };

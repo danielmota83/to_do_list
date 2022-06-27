@@ -1,10 +1,6 @@
 const tarefasService = require('../service/tarefas.services');
 
 const initialController = (req, res) => {
-  console.log(req.headers['user-agent']);
-  if (req.headers['user-agent'].slice(0, 7) == 'Thunder') {
-    res.send('Thunder client não esta autorizado');
-  }
   const response = tarefasService.initialService();
   res.send(response);
 };
@@ -53,8 +49,6 @@ const deleteTarefa = (req, res) => {
   const response = tarefasService.deleteTarefa(id);
   res.send(response);
 };
-
-
 
 module.exports = {
   initialController,
