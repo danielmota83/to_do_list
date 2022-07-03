@@ -1,21 +1,21 @@
  [
     {
 
-      "tarefa": "Atividade física",
+      "oQueFazer": "Atividade física",
       "lembrarDe": "Colocar o relógio para despertar. ",
       "descricao": "corrida e exercícios ao ar livre",
      "horario": 5.3
     },
     {
    
-      "tarefa": "Dar aulas de física",
+      "oQueFazer": "Dar aulas de física",
       "lembrarDe": "Pegar todos os materias para as aulas ",
       "descricao": "Aulas de física para as turmas do 1º e 3º anos do ensino médio",
      "horario": 7.0
     },
     {
  
-      "tarefa": "Estudar Programação",
+      "oQueFazer": "Estudar Programação",
       "lembrarDe": "Revisar o conteúdo da aula anterior.",
       "descricao": "Aulas de desenvolvimento full stack da BlueEdTech.",
      "horario": 19.0

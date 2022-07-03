@@ -5,8 +5,9 @@ const tarefaRoutes = require('./src/routes/tarefas.routes');
 const connectToDatabase = require('./src/database/mongoConnection')
 
 const port = 3000;
-const app = express();
 
+const app = express();
+app.use(express.json());
 app.use(cors());
 
 connectToDatabase();

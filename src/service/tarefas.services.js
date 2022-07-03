@@ -12,10 +12,7 @@ const findTarefaById = async(id) => {
       };
 
  
-const createTarefa = async(tarefa) => {
-  const createTarefa = await Tarefa.create(tarefa);
-  return createTarefa;
-};
+const createTarefa = async(newTarefa) => await Tarefa.create(newTarefa);
 
 const updateTarefa = async (id, updatedTarefa) => {
   const updateTarefa = await Tarefa.findByIdAndUpdate(
@@ -29,13 +26,10 @@ const deleteTarefa = async (id) => {
   return await Tarefa.findByIdAndDelete(id);
 };
 
-const initialService = () => {
-  return 'hello world';
-};
+
 
 module.exports = {
-  initialService,
-  findAllTarefas,
+   findAllTarefas,
   findTarefaById,
   createTarefa,
   deleteTarefa,
