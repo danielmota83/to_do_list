@@ -15,8 +15,8 @@ const findAllTarefas = async (req, res) => {
 const findTarefaById = async (req, res) => {
   const id = req.params.id;
 
-    const tarefa = await tarefasService.findTarefaById(id);
-  
+  const tarefa = await tarefasService.findTarefaById(id);
+
   if (!tarefa) {
     res.status(206).send({ message: 'Nenhuma tarefa encontrada' });
   } else {
@@ -29,11 +29,10 @@ const findTarefaById = async (req, res) => {
 const createTarefa = async (req, res) => {
   const tarefa = req.body;
 
-   const newTarefa = await tarefasService.createTarefa(tarefa);
+  const newTarefa = await tarefasService.createTarefa(tarefa);
 
   res.status(201).send(newTarefa);
 };
-
 
 const updateTarefa = async (req, res) => {
   const id = req.params.id;
@@ -45,7 +44,7 @@ const updateTarefa = async (req, res) => {
     return res.status(206).send({ message: 'Tarefa não encontrada!' });
   }
 
-   const updatedTarefa = await tarefasService.updateTarefa(id, tarefaEdit);
+  const updatedTarefa = await tarefasService.updateTarefa(id, tarefaEdit);
 
   res.send(updatedTarefa);
 };
@@ -53,7 +52,7 @@ const updateTarefa = async (req, res) => {
 const deleteTarefa = async (req, res) => {
   const id = req.params.id;
 
-    const chosenTarefa = await tarefasService.findTarefaById(id);
+  const chosenTarefa = await tarefasService.findTarefaById(id);
 
   if (!chosenTarefa) {
     return res.status(206).send({ message: 'Tarefa não encontrada!' });
@@ -65,7 +64,7 @@ const deleteTarefa = async (req, res) => {
 };
 
 module.exports = {
-   findAllTarefas,
+  findAllTarefas,
   findTarefaById,
   createTarefa,
   updateTarefa,

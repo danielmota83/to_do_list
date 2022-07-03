@@ -1,18 +1,16 @@
+const Tarefa = require('../models/Tarefa');
 
-const Tarefa =  require('../models/Tarefa')
-
-const findAllTarefas = async() => {
+const findAllTarefas = async () => {
   const allTarefas = await Tarefa.find();
   return allTarefas;
- };
+};
 
-const findTarefaById = async(id) => {
-  const oneTarefa = await Tarefa.findById(id)
-        return oneTarefa;
-      };
+const findTarefaById = async (id) => {
+  const oneTarefa = await Tarefa.findById(id);
+  return oneTarefa;
+};
 
- 
-const createTarefa = async(newTarefa) => await Tarefa.create(newTarefa);
+const createTarefa = async (newTarefa) => await Tarefa.create(newTarefa);
 
 const updateTarefa = async (id, updatedTarefa) => {
   const updateTarefa = await Tarefa.findByIdAndUpdate(
@@ -26,10 +24,8 @@ const deleteTarefa = async (id) => {
   return await Tarefa.findByIdAndDelete(id);
 };
 
-
-
 module.exports = {
-   findAllTarefas,
+  findAllTarefas,
   findTarefaById,
   createTarefa,
   deleteTarefa,

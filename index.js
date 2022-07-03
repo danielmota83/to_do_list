@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const tarefaRoutes = require('./src/routes/tarefas.routes');
 
-const connectToDatabase = require('./src/database/mongoConnection')
+const connectToDatabase = require('./src/database/mongoConnection');
 
 const port = 3000;
 

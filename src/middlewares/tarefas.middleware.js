@@ -22,11 +22,11 @@ const validObjectBody = (req, res, next) => {
   ) {
     return res.status(400).send({
       message:
-        'Você não preencheu todos os dados para adicionar uma nova tarefa à To do List!' });
+        'Você não preencheu todos os dados para adicionar uma nova tarefa à To do List!',
+    });
   }
 
   next();
 };
 
 module.exports = { validId, validObjectBody };
-

@@ -15,6 +15,16 @@ Lista em memória ;
 CORS - Liberado ;
 Formatação do código utilizando o Prettier .
 
+To Do List - #02 Entrega
+Backend CRUD MongoDB (Create, Update, Delete)
+Critérios de Avaliação
+Endpoints (2 pontos)
+[GET] Leitura de todas os personagens (0,4 pontos);
+[GET] Leitura de personagens individuais (por ID) (0,4 pontos).
+[POST] Criação de personagens (0,4 pontos);
+[PUT] Edição de personagens por ID (0,4 pontos);
+[DELETE] Exclusão de personagens por ID (0,4 pontos)
+
 Linguagem: JavaScript
-Tecnologias: NodeJs e Express
+Tecnologias: NodeJs e Express e MongoDB
 
