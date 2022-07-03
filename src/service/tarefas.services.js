@@ -1,74 +1,35 @@
-const { v4: uuidv4 } = require('uuid');
 
-const tarefas = [
-  {
-    id: 1,
-    tarefa: 'Atividade física',
-    lembrarDe: 'Colocar o relógio para despertar. ',
-    descricao: 'corrida e exercícios ao ar livre',
-    horario: 5.3,
-  },
-  {
-    id: 2,
-    tarefa: 'Dar aulas de física',
-    lembrarDe: 'Pegar todos os materias para as aulas ',
-    descricao: 'Aulas de física para as turmas do 1º e 3º anos do ensino médio',
-    horario: 7.0,
-  },
-  {
-    id: 3,
-    tarefa: 'Estudar Programação',
-    lembrarDe: 'Revisar o conteúdo da aula anterior.',
-    descricao: 'Aulas de desenvolvimento full stack da BlueEdTech.',
-    horario: 19.0,
-  },
-];
+const Tarefa =  require('../models/Tarefa')
 
-const findAllTarefas = () => tarefas;
+const findAllTarefas = async() => {
+  const allTarefas = await Tarefa.find();
+  return allTarefas;
+ };
 
-const findTarefaById = (id) => {
-  let indice = 0;
-  const tarefaById = tarefas.map((tarefa, index) => {
-    if (tarefa.id === id) {
-      indice = index;
-      return tarefa;
-    }
-  });
+const findTarefaById = async(id) => {
+  const oneTarefa = await Tarefa.findById(id)
+        return oneTarefa;
+      };
 
-  return tarefaById[indice];
+ 
+const createTarefa = async(newTarefa) => await Tarefa.create(newTarefa);
+
+const updateTarefa = async (id, updatedTarefa) => {
+  const updateTarefa = await Tarefa.findByIdAndUpdate(
+    id,
+    updatedTarefa,
+  ).setOptions({ returnOriginal: false });
+  return updateTarefa;
 };
 
-const createTarefa = (tarefa) => {
-  tarefa.id = uuidv4();
-  tarefas.push(tarefa);
-  return tarefas;
+const deleteTarefa = async (id) => {
+  return await Tarefa.findByIdAndDelete(id);
 };
 
-const updateTarefa = (id, updatedTarefa) => {
-  tarefas.forEach((tarefa, index) => {
-    if (tarefa.id === id) {
-      updatedTarefa.id = id;
-      tarefa[index] = updatedTarefa;
-    }
-  });
-  return tarefas;
-};
 
-const deleteTarefa = (id) => {
-  tarefas.forEach((tarefa, index) => {
-    if (tarefa.id === id) {
-      tarefas.splice(index, 1);
-    }
-  });
-};
-
-const initialService = () => {
-  return 'hello world';
-};
 
 module.exports = {
-  initialService,
-  findAllTarefas,
+   findAllTarefas,
   findTarefaById,
   createTarefa,
   deleteTarefa,
